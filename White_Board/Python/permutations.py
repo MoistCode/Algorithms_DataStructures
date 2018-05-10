@@ -1,4 +1,4 @@
-def permutation(myList, first_index = 0, last_index = len(myList) - 1):
+def permutation(myList, first_index, last_index):
     if first_index == last_index:
         print ''.join(str(myList))
     else:
@@ -8,4 +8,4 @@ def permutation(myList, first_index = 0, last_index = len(myList) - 1):
             myList[i], myList[first_index] = myList[first_index], myList[i]
 
 
-permutation([1,2,3])
+permutation([1,2,3], 0, 3)
