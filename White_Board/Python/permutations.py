@@ -8,4 +8,4 @@ def permutation(myList, first_index, last_index):
             myList[i], myList[first_index] = myList[first_index], myList[i]
 
 
-permutation([1,2,3], 0, 3)
+permutation([1,2,3], 0, 2)
