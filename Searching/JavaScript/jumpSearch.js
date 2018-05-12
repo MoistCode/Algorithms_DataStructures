@@ -4,7 +4,7 @@ const jumpSearch = (arr, val, arrLength) => {
 
     while(arr[Math.min(arrLength, step)] < val) {
         prev = step;
-        step = parseInt(Math.sqrt(arrLength));
+        step += parseInt(Math.sqrt(arrLength));
 
         if (prev >= arrLength) {
             return -1;
