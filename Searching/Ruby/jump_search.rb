@@ -1,11 +1,11 @@
-def jump_search(arr, val, arrLength)
-    step = Math.sqrt(arrLength).to_i
+def jump_search(arr, val, arr_length)
+    step = Math.sqrt(arr_length).to_i
     prev = 0
 
-    while arr[[step, arrLength].min] < val
+    while arr[[step, arr_length].min] < val
         prev = step 
-        step += Math.sqrt(arrLength).to_i
-        if prev >= arrLength 
+        step += Math.sqrt(arr_length).to_i
+        if prev >= arr_length 
             return -1
         end
     end
@@ -13,7 +13,7 @@ def jump_search(arr, val, arrLength)
     while arr[prev] < val 
         prev += 1 
 
-        if prev == [step, arrLength].min 
+        if prev == [step, arr_length].min 
             return -1
         end
     end
