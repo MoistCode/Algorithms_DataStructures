@@ -33,8 +33,7 @@ def merge(arr, left_idx, mid_idx, right_idx ):
         arr[k] = rightTempArr[j] 
         j += 1 
         k += 1
-
-
+        
 def mergeSort(arr, left_idx, right_idx):
     if left_idx < right_idx:
         mid_idx = (left_idx + (right_idx - 1)) / 2
@@ -49,3 +48,4 @@ right_idx = len(arr) - 1
 
 mergeSort(arr, left_idx, right_idx)
 print(arr)
+
