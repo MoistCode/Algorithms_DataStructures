@@ -1,19 +1,27 @@
 class Graph 
-    def initialize
+    def initialize 
+        @graph = Hash.new { Array.new }
+    end
 
+    def add_edge(starting_vector, ending_vector)
+        @graph[starting] += [ending_vector]
+    end
+
+    def breadth_first_search(starting_vector)
+        visited = Hash.new { false }
+
+        queue = [starting_vector] + @graph[starting_vector]
+        final_arr = []
+
+        until queue.empty?
+            current_vector = queue.shift
+
+            if visited[current_vector] == false
+                final_arr << current_vector
+                visited[current_vector] = true
+            end
+        end
+
+        return final_arr
     end
 end
-
-class Node 
-    def initialize(value, graph, to_node, from_node)
-
-    end
-end
-
-graph = new Graph 
-
-node1 = new Node(1, graph)
-node2 = new Node(2, graph)
-node3 = new Node(3, graph)
-node4 = new Node(4, graph)
-node5 = new Node(5, graph)
