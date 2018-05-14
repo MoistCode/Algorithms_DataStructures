@@ -18,9 +18,20 @@ class Graph:
 
         while queue:
             s = queue.pop(0)
-            print(s, end = ' ')
+            print(s)
 
             for i in self.graph[s]:
                 if visited[i] == False:
                     queue.append(i) 
                     visited[i] = True
+    
+graph = Graph() 
+
+graph.addEdge(0, 1)
+graph.addEdge(0, 2)
+graph.addEdge(1, 2)
+graph.addEdge(2, 0)
+graph.addEdge(2, 3)
+graph.addEdge(3, 3)
+
+graph.BFS(2)
