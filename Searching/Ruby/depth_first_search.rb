@@ -16,8 +16,6 @@ class Graph
 
     def dfs_util(vector, visited)
         visited[vector] = true
-        puts vector
-
         @graph[vector].each do |v|
             dfs_util(v, visited) unless visited[v]
         end
