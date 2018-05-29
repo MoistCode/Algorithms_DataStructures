@@ -13,7 +13,7 @@ class CustomLinkedList {
 
     addNode(addedNode) {
         let currentNode = this.headNode;
-        while(currentNode.next != null) {
+        while(currentNode.next !== null) {
             currentNode = currentNode.next;
         }
         currentNode.next = addedNode;
@@ -21,7 +21,7 @@ class CustomLinkedList {
 
     printLinkedList() {
         let currentNode = this.headNode;
-        while(currentNode.next != null) {
+        while(currentNode !== null) {
             console.log(currentNode.data);
             currentNode = currentNode.next;
         }
@@ -46,13 +46,13 @@ listOfNodes[1].addNode(new Node(1));
 listOfNodes[1].addNode(new Node(5));
 listOfNodes[1].addNode(new Node(6));
 
-listOfNodes[2].addNode(new Node(3));
+listOfNodes[2].addNode(new Node(1));
 
 listOfNodes[3].addNode(new Node(1));
 listOfNodes[3].addNode(new Node(5));
 
-listOfNodes[4].addNode(new Node(1));
-listOfNodes[4].addNode(new Node(5));
+listOfNodes[4].addNode(new Node(2));
+listOfNodes[4].addNode(new Node(4));
 
 listOfNodes[5].addNode(new Node(1));
 listOfNodes[5].addNode(new Node(2));
