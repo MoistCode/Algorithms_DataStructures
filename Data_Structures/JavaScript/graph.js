@@ -1,0 +1,3 @@
+let vertexList = []
+let edgeList = []
+
