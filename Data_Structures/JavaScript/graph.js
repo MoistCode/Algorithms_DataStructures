@@ -1,5 +1,3 @@
-
-
 class Node {
     constructor(data) {
         this.data = data;
@@ -60,3 +58,4 @@ listOfNodes[5].addNode(new Node(2));
 listOfNodes.forEach((linkedList) => {
     linkedList.printLinkedList();
 });
+
