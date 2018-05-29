@@ -5,8 +5,8 @@ class Node {
         this.next = null;
     }
 }
-class LinkedList {
-    constructor() {
+class CustomLinkedList {
+    constructor(vertex) {
         this.headNode = new Node(null);
     }
 
@@ -14,7 +14,3 @@ class LinkedList {
 
     }
 }
-
-// Adjacency matrix
-
-// Adjacency list
