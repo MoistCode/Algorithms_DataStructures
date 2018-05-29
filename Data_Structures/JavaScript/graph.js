@@ -23,7 +23,7 @@ class CustomLinkedList {
             console.log(currentNode.data);
             currentNode = currentNode.next;
         }
-        console.log("====================================");
+        console.log("======");
     }
 }
 
