@@ -10,6 +10,20 @@
 
 const rockPaperScissor = rounds => {
   let results = [];
+  let possibilities = ["r", "p", "s"];
 
-  const getRPSCombinations = (alreadyDone, rounds) => {};
+  const getRPSCombinations = (alreadyDone, rounds) => {
+    if (rounds === 0) {
+      results.push(alreadyDone);
+      return;
+    }
+    for (poss of possibilities) {
+      getRPSCombinations(alreadyDone + poss, rounds - 1);
+    }
+  };
+
+  getRPSCombinations("", rounds);
+  return results;
 };
+
+console.log(rockPaperScissor(2));
