@@ -8,22 +8,41 @@
     ]
 */
 
-const rockPaperScissor = rounds => {
-  let results = [];
-  let possibilities = ["r", "p", "s"];
+// const rockPaperScissor = rounds => {
+//   let results = [];
+//   let possibilities = ["r", "p", "s"];
 
-  const getRPSCombinations = (alreadyDone, rounds) => {
+//   const getRPSCombinations = (alreadyDone, rounds) => {
+//     if (rounds === 0) {
+//       results.push(alreadyDone);
+//       return;
+//     }
+//     for (poss of possibilities) {
+//       getRPSCombinations(alreadyDone + poss, rounds - 1);
+//     }
+//   };
+
+//   getRPSCombinations("", rounds);
+//   return results;
+// };
+
+// console.log(rockPaperScissor(2));
+
+const rockPaperScissor = rounds => {
+  const possibles = ["r", "p", "s"];
+  const results = [];
+
+  const getPerms = (currentCombo, rounds) => {
     if (rounds === 0) {
-      results.push(alreadyDone);
+      results.push(currentCombo);
       return;
     }
-    for (poss of possibilities) {
-      getRPSCombinations(alreadyDone + poss, rounds - 1);
+    for (poss of possibles) {
+      getPerms(currentCombo + poss, rounds - 1);
     }
   };
-
-  getRPSCombinations("", rounds);
+  getPerms("", rounds);
   return results;
 };
 
-console.log(rockPaperScissor(2));
+console.log(rockPaperScissor(3));
