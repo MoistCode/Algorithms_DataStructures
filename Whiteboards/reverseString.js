@@ -41,4 +41,10 @@ function reverseString6(str) {
   return revString;
 }
 
+function reverseString7(str) {
+  let revString = "";
+  str.split("").forEach(char => (revString = char + revString));
+  return revString;
+}
+
 console.log(reverseString2("cowman"));
