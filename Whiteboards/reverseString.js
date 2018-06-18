@@ -17,4 +17,12 @@ function reverseString3(str) {
     .join("");
 }
 
+function reverseString4(str) {
+  let revString = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    revString = revString + str[i];
+  }
+  return revString;
+}
+
 console.log(reverseString2("cowman"));
