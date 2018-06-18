@@ -10,4 +10,11 @@ function reverseString2(str) {
     .reduce((reversedString, character) => character + reversedString, "");
 }
 
+function reverseString3(str) {
+  return str
+    .split("")
+    .reverse()
+    .join("");
+}
+
 console.log(reverseString2("cowman"));
