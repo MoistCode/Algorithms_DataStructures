@@ -33,4 +33,12 @@ function reverseString5(str) {
   return revString;
 }
 
+function reverseString6(str) {
+  let revString = "";
+  for (let char of str) {
+    revString = char + revString;
+  }
+  return revString;
+}
+
 console.log(reverseString2("cowman"));
