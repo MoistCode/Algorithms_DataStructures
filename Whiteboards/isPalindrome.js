@@ -18,3 +18,12 @@ function isPalindrome2(str) {
   }
   return isPali;
 }
+
+function isPalindrome3(str) {
+  return (
+    str
+      .split("")
+      .reverse()
+      .join("") === str
+  );
+}
