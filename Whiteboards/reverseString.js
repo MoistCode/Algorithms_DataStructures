@@ -25,4 +25,12 @@ function reverseString4(str) {
   return revString;
 }
 
+function reverseString5(str) {
+  let revString = "";
+  for (let i = 0; i <= str.length - 1; i++) {
+    revString = str[i] + revString;
+  }
+  return revString;
+}
+
 console.log(reverseString2("cowman"));
