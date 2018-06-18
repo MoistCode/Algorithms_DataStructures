@@ -6,4 +6,10 @@ function reverseString1(str) {
   return newArr.join("");
 }
 
-function reverseString2(str) {}
+function reverseString2(str) {
+  return str.split("").reduce((reversedString, character) => {
+    return character + reversedString;
+  }, "");
+}
+
+console.log(reverseString2("cowman"));
