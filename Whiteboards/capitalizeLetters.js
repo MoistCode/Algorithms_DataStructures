@@ -7,4 +7,10 @@ function capitalizeLetters1(str) {
   return strArr.join(" ");
 }
 
-console.log(capitalizeLetters1("cowman is nigh"));
+function capitalizeLetters2(str) {
+  return str.replace(/\b[a-z]/gi, function(char) {
+    return char.toUpperCase();
+  });
+}
+
+console.log(capitalizeLetters2("cowman is nigh"));
